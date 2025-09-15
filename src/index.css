@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #000000ff;
+  color: #ffffff;
+}
+
+#tasklist::-webkit-scrollbar {
+  display: none;
+
+}
+
+:root {
+  /* Define your primary color palette */
+  --color-primary-500: #10B981; /* Emerald 500 */
+  --color-primary-600: #059669; /* Emerald 600 */
+  --color-primary-700: #047857; /* Emerald 700 */
+
+  /* Font Family Variables */
+  --font-poppins: 'Poppins', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-roboto); /* Default font for body */
+  /* Agar aap dark mode support karna chahte hain */
+  @apply text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-900;
+  transition: background-color 0.3s ease; /* Smooth dark mode transition */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins); /* Headings ke liye Poppins */
+}
+
+/* Custom utility for active scale effect on buttons */
+.active\\:scale-95:active {
+  transform: scale(0.95);
+}
